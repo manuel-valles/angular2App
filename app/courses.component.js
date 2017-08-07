@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,33 +10,30 @@ System.register(['angular2/core', './courses.component'], function(exports_1, co
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_component_1;
-    var AppComponent;
+    var core_1;
+    var CoursesComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (courses_component_1_1) {
-                courses_component_1 = courses_component_1_1;
             }],
         execute: function() {
-            // Call the Component: function that takes an object and have 2 fields.
-            AppComponent = (function () {
-                function AppComponent() {
+            CoursesComponent = (function () {
+                function CoursesComponent() {
+                    this.title = "The title of courses page";
+                    this.courses = ["Course1", "Course2", "Course3"];
                 }
-                AppComponent = __decorate([
+                CoursesComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<h1>Hello Angular!</h1><courses></courses>',
-                        directives: [courses_component_1.CoursesComponent]
+                        selector: 'courses',
+                        template: "\n\t\t<h2>Courses</h2>\n\t\t{{ title }}\n\t\t<ul>\n\t\t\t<li *ngFor=\"#course of courses\">\n\t\t\t{{course}}\n\t\t\t</li>\n\t\t</ul>\n\t\t"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], CoursesComponent);
+                return CoursesComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("CoursesComponent", CoursesComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=courses.component.js.map

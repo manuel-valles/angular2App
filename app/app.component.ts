@@ -6,7 +6,11 @@ import {AuthorsComponent} from './authors.component';
 // Call the Component: function that takes an object and have 2 fields.
 @Component({
     selector: 'my-app',
-    template: '<h1>Hello Angular!</h1><courses></courses><authors></authors>',
+    template: `
+    	<h1>Hello Angular!</h1>
+    	<courses></courses>
+    	<authors></authors>
+    	`,
     directives: [CoursesComponent, AuthorsComponent]
 })
 
